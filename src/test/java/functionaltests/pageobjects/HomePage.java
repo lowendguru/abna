@@ -6,10 +6,9 @@ import org.openqa.selenium.WebElement;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 
-@Getter
 public class HomePage extends BasePage {
 
-    Header header;
+    public Header header;
 
     @FindBy(css = ".div-container")
     public WebElement mainText;

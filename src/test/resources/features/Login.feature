@@ -1,3 +1,4 @@
+@LOGIN
 Feature: Login
   As a customer
   I want to be able to login
@@ -5,6 +6,7 @@ Feature: Login
   Background: Login page
     Given I go to the Login page
 
+  @SMOKE
   Scenario: Login page shows login form
     Then all elements of the Login page are displayed
     And the welcome message of the Login page is 'Automation doesn't stop at testing, it's just a beginning!'
@@ -28,8 +30,6 @@ Feature: Login
     And I enter password <password> in the login form
     And I click the Login button of the login form
     Then the Home page is not displayed
-
-
 
     Examples:
       | reference                   | username        | password      |
