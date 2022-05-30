@@ -12,13 +12,13 @@ The requirements to run the automated tests are:
 # Executing from command line
 This is a maven project. If Java and Maven are correctly configured in the host system, the test suite can be executed via the following command lines.
 
-To run all tests scenarios available in the folder src/test/resources/features/ use the command:
+To run all tests scenarios available in the folder `src/test/resources/features/` use the command:
 
 ` mvn clean integration-test `
 
-To run a subset of scenarios filtered by @tags use:
+To run a subset of scenarios filtered by `@tags` use the following line with the desired tags:
 
-`mvn clean integration-test -Dcucumber.filter.tags="@tag"`
+`mvn clean integration-test -Dcucumber.filter.tags="@tag1 or @tag2"`
 
 ### Test reports
 

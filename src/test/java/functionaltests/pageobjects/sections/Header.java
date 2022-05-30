@@ -1,11 +1,12 @@
 package functionaltests.pageobjects.sections;
 
+import functionaltests.pageobjects.BasePage;
 import org.openqa.selenium.WebElement;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
-public class Header {
+public class Header extends BasePage {
 
 	@FindBy(id = "navigation")
 	public WebElementFacade navigationHeader;

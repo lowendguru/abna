@@ -1,5 +1,6 @@
 package functionaltests.pageobjects;
 
+import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.WebElement;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -14,9 +15,9 @@ public class LoginPage extends BasePage {
 	@FindBy(id = "password")
 	public WebElement passwordField;
 
-	@FindBy(id = "login")
-	public WebElement loginButton;
+	@FindBy(css = ".btn-login")
+	public WebElementFacade loginButton;
 	
 	@FindBy(css = ".login h1")
-	public WebElement loginWelcomeText;
+	public WebElementFacade loginWelcomeText;
 }

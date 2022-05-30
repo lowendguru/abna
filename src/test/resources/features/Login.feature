@@ -1,4 +1,4 @@
-@LOGIN
+@Login
 Feature: Login
   As a customer
   I want to be able to login
@@ -6,16 +6,17 @@ Feature: Login
   Background: Login page
     Given I go to the Login page
 
-  @SMOKE
+  @Smoke
   Scenario: Login page shows login form
     Then all elements of the Login page are displayed
     And the welcome message of the Login page is 'Automation doesn't stop at testing, it's just a beginning!'
 
+  @Smoke @LoginValidCredentials
   Scenario Outline: Login with valid credentials
     When I enter username <username> in the login form
     And I enter password <password> in the login form
     And I click the Login button of the login form
-    Then the Home page is displayed
+    Then the Home page main text is displayed
     And the Header elements are displayed
 
     Examples:
@@ -24,7 +25,7 @@ Feature: Login
       | biancunha@gmail.com    | 123456     |
       | growdev@growdev.com.br | growdev123 |
 
-
+  @Smoke @LoginInvalidCredentials
   Scenario Outline: Login with invalid credentials - <reference>
     When I enter username <username> in the login form
     And I enter password <password> in the login form
@@ -39,6 +40,7 @@ Feature: Login
       | Non existing Username       | admin@admin.co  | 2020          |
       | Empty Username and Password |                 |               |
 
+  @LoginBrowserSession
   Scenario: Authenticated user credentials are available in browser session
    
    

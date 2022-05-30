@@ -15,13 +15,11 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class BasePage extends PageObject {
 	final static Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-	WebDriver driver;
 
-	public void clickByScript(WebElement element) {
-		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	public static void clickByScript(WebDriver driver,WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", element);
 	}
-
 
 
 	public boolean waitForJStoLoad() {

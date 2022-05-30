@@ -26,12 +26,12 @@ public class LoginSteps {
         Assertions.assertThat(loginPage.loginWelcomeText.getText()).describedAs("Login screen welcome text does not match expected").isEqualTo(expectedText);
     }
 
-    @When("I enter username (.*) in the login form")
+    @When("^I enter username (.*) in the login form")
     public void i_enter_username_in_the_login_form(String username) {
         loginPage.emailField.sendKeys(username);
     }
 
-    @When("I enter password (.*) in the login form")
+    @When("^I enter password (.*) in the login form")
     public void i_enter_password_in_the_login_form(String password) {
         loginPage.passwordField.sendKeys(password);
     }
@@ -41,14 +41,15 @@ public class LoginSteps {
         loginPage.loginButton.click();
     }
 
-    @Then("the Home page is displayed")
+    @Then("the Home page main text is displayed")
     public void the_home_page_is_displayed() {
-//TODO
-        
+        Assertions.assertThat(homePage.mainText.isDisplayed()).describedAs("Home page text is not displayed").isTrue();
     }
 
     @Then("the Header elements are displayed")
     public void the_header_elements_are_displayed() {
+        homePage.waitForJStoLoad();
+        Assertions.assertThat(homePage.header.navigationHeader.isDisplayed()).describedAs("Navigation header is not displayed").isTrue();
         SoftAssertions.assertSoftly(softly -> {
             softly.assertThat(homePage.header.homeButton.isDisplayed()).describedAs("Home button is not displayed").isTrue();
             softly.assertThat(homePage.header.productsButton.isDisplayed()).describedAs("Products button is not displayed").isTrue();
