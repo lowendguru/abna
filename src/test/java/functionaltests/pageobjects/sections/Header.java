@@ -8,22 +8,22 @@ import net.serenitybdd.core.pages.WebElementFacade;
 public class Header {
 
 	@FindBy(id = "navigation")
-	WebElement navigationHeader;
+	public WebElement navigationHeader;
 
 	@FindBy(css = ".home")
-	WebElement homeButton;
+	public WebElement homeButton;
 
 	@FindBy(css = ".products")
-	WebElement productsButton;
+	public WebElement productsButton;
 	
 	@FindBy(css = ".contact")
-	WebElement contactButton;
+	public WebElement contactButton;
 	
 	@FindBy(id = "user")
-	WebElement userMenuButton;
+	public WebElement userMenuButton;
 	
 	@FindBy(id = "logout")
-	WebElementFacade logoutButton;
+	public WebElementFacade logoutButton;
 	
 	
 }

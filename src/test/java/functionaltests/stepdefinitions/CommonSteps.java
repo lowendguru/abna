@@ -6,12 +6,13 @@ import io.cucumber.java.en.Given;
 
 public class CommonSteps {
 
-	LoginPage loginPage;
+    LoginPage loginPage;
 
 
-	@Given("hello")
-	public void openPage() {
-		loginPage.open();
-		
-	}
+    @Given("I go to the Login page")
+    public void i_go_to_the_login_page() {
+        loginPage.open();
+    }
+
+
 }

@@ -9,14 +9,14 @@ import net.thucydides.core.annotations.DefaultUrl;
 public class LoginPage extends BasePage {
 
 	@FindBy(id = "email")
-	WebElement emailField;
+	public WebElement emailField;
 
 	@FindBy(id = "password")
-	WebElement passwordField;
+	public WebElement passwordField;
 
 	@FindBy(id = "login")
-	WebElement loginButton;
+	public WebElement loginButton;
 	
 	@FindBy(css = ".login h1")
-	WebElement loginWelcomeText;
+	public WebElement loginWelcomeText;
 }
