@@ -30,7 +30,7 @@ Feature: Login
     When I enter username <username> in the login form
     And I enter password <password> in the login form
     And I click the Login button of the login form
-    Then the Home page is not displayed
+    Then the Home page main text is not displayed
 
     Examples:
       | reference                   | username        | password      |

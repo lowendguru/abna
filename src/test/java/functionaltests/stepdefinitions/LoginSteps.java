@@ -41,9 +41,17 @@ public class LoginSteps {
         loginPage.loginButton.click();
     }
 
-    @Then("the Home page main text is displayed")
-    public void the_home_page_is_displayed() {
-        Assertions.assertThat(homePage.mainText.isDisplayed()).describedAs("Home page text is not displayed").isTrue();
+    @Then("^the Home page main text (.*) displayed")
+    public void the_home_page_displayed(String value) {
+        switch (value) {
+            case "is":
+                Assertions.assertThat(homePage.mainText.isDisplayed()).describedAs("Home page text is not displayed").isTrue();
+                break;
+            case "is not":
+                Assertions.assertThat(homePage.mainText.isVisible()).describedAs("Home page text is displayed").isFalse();
+                break;
+        }
+
     }
 
     @Then("the Header elements are displayed")
