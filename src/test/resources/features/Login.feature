@@ -1,6 +1,6 @@
 @Login
 Feature: Login
-  As a customer
+  As a non logged in customer
   I want to be able to login
 
   Background: Login page

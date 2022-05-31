@@ -12,6 +12,7 @@ public class LoginSteps {
     LoginPage loginPage;
     HomePage homePage;
 
+
     @Then("all elements of the Login page are displayed")
     public void all_elements_of_the_login_page_are_displayed() {
         SoftAssertions.assertSoftly(softly -> {
