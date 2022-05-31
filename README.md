@@ -22,4 +22,4 @@ To run a subset of scenarios filtered by `@tags` use the following line with the
 
 ### Test reports
 
-Results will be available in the file `target/cucumber-report/CucumberReport.html` after the execution is completed
+Results will be available in the file `target/site/serenity/index.html` after the execution is completed
