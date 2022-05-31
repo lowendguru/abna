@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login","Login with valid credentials","SUCCESS","2022-05-31T21:59:51.748+02:00[Europe/Berlin]","0.0","10.93"
+"Login","Login with invalid credentials - <reference>","SUCCESS","2022-05-31T22:00:02.687+02:00[Europe/Berlin]","0.0","28.07"

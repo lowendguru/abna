@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login","Login page shows login form","SUCCESS","2022-05-31T21:59:48.326+02:00[Europe/Berlin]","0.0","3.41"
+"Login","Login with valid credentials","SUCCESS","2022-05-31T21:59:51.748+02:00[Europe/Berlin]","0.0","10.93"
+"Login","Login with invalid credentials - <reference>","SUCCESS","2022-05-31T22:00:02.687+02:00[Europe/Berlin]","0.0","28.07"
+"Login","Authenticated user maintains browser session across tabs","SUCCESS","2022-05-31T22:00:30.763+02:00[Europe/Berlin]","0.0","3.89"
