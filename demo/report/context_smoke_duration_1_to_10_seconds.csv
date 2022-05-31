@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Home Page","Header elements are present","SUCCESS","2022-05-31T21:59:30.911+02:00[Europe/Berlin]","0.0","5.89"
-"Login","Login page shows login form","SUCCESS","2022-05-31T21:59:48.326+02:00[Europe/Berlin]","0.0","3.41"
-"Logout","Authenticated user can logout","SUCCESS","2022-05-31T22:00:34.662+02:00[Europe/Berlin]","0.0","8.06"

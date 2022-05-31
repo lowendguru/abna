@@ -11,18 +11,21 @@ Feature: Home Page
   Scenario: Header elements are present
     Then the Header elements are displayed
 
+    # Assumption: The 'Products' link should redirect to a Products page.
   @ProductsPage
   Scenario: Products page
     When the Header elements are displayed
     And I click on the Products button of the header navigation
     Then the title of the page contains the word 'Products'
 
+    # Assumption: The 'Contact' link should redirect to a Contact page.
   @ContactPage
   Scenario: Contact page
     When the Header elements are displayed
     And I click on the Contact button of the header navigation
     Then the title of the page contains the word 'Contact'
 
+    # Assumption: The header navigation links should redirect to different pages.
   @HeaderNavigation
   Scenario: Header navigation through sections
     When the Header elements are displayed
