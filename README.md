@@ -2,7 +2,7 @@
 Test Automation Assignment. The goal of this project is to demonstrate a test approach with a test automation framework.
 
 ## Test environment
-The web page was originally available in a .zip file and was then deployed in a test server with url: http://abna.lowendguru.com/
+The web page under test was originally available in a .zip file and was then deployed in a test server with url: http://abna.lowendguru.com/
 
 # Automated test suite
 The functional tests are written in Java using Serenity and Cucumber.
