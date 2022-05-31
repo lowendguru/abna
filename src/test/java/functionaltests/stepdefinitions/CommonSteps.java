@@ -1,15 +1,18 @@
 package functionaltests.stepdefinitions;
 
 
+import functionaltests.pageobjects.BasePage;
 import functionaltests.pageobjects.LoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.util.EnvironmentVariables;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +25,7 @@ public class CommonSteps {
     @Managed
     WebDriver driver;
 
+    BasePage basePage;
     LoginPage loginPage;
 
     @Given("I go to the Login page")
@@ -53,4 +57,15 @@ public class CommonSteps {
     public void theTitleOfThePageContainsTheWordProducts(String expectedText) {
         Assertions.assertThat(driver.getTitle()).describedAs("Title does not contain expected text").contains(expectedText);
     }
+
+    @When("I open a new browser tab")
+    public void i_open_a_new_browser_tab() {
+        driver.switchTo().newWindow(WindowType.TAB);
+    }
+
+    @When("I go to the base url")
+    public void i_go_to_the_base_url() {
+        basePage.open();
+    }
+
 }

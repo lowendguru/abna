@@ -41,6 +41,12 @@ Feature: Login
       | Empty Username and Password |                 |               |
 
   @LoginBrowserSession @WIP
-  Scenario: Authenticated user credentials are available in browser session
+  Scenario: Authenticated user maintains browser session across tabs
+    Given I login with valid credentials
+    And the Home page main text is displayed
+    When I open a new browser tab
+    And I go to the base url
+    Then the Home page main text is displayed
+    And the Header elements are displayed
    
    
