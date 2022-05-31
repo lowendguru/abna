@@ -18,7 +18,7 @@ Feature: Logout
     And all elements of the Login page are displayed
 
 
-  @LogoutBrowserSession
+  @LogoutBrowserSession @WIP
   Scenario: Logout is valid for all browser tabs
    
    

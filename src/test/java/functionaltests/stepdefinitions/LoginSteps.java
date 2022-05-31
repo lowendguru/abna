@@ -52,7 +52,6 @@ public class LoginSteps {
                 Assertions.assertThat(homePage.mainText.isVisible()).describedAs("Home page text is displayed").isFalse();
                 break;
         }
-
     }
 
     @Then("the Header elements are displayed")

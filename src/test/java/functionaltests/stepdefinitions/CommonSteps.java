@@ -4,9 +4,11 @@ package functionaltests.stepdefinitions;
 import functionaltests.pageobjects.LoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.util.EnvironmentVariables;
+import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,13 +23,12 @@ public class CommonSteps {
     WebDriver driver;
 
     LoginPage loginPage;
-    LoginSteps loginSteps;
 
     @Given("I go to the Login page")
     public void i_go_to_the_login_page() {
         loginPage.open();
     }
-    
+
     @Given("I login with valid credentials")
     public void i_login_with_valid_credentials() {
         loginPage.emailField.sendKeys(getProperty("validUsername"));
@@ -46,5 +47,10 @@ public class CommonSteps {
     public static String getProperty(String propertyName) {
         return EnvironmentSpecificConfiguration.from(environmentVariables)
                 .getProperty(propertyName);
+    }
+
+    @Then("^the title of the page contains the word '(.*)'")
+    public void theTitleOfThePageContainsTheWordProducts(String expectedText) {
+        Assertions.assertThat(driver.getTitle()).describedAs("Title does not contain expected text").contains(expectedText);
     }
 }

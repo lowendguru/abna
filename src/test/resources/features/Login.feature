@@ -3,7 +3,7 @@ Feature: Login
   As a non logged in customer
   I want to be able to login
 
-  Background: Login page
+  Background:
     Given I go to the Login page
 
   @Smoke
@@ -40,7 +40,7 @@ Feature: Login
       | Non existing Username       | admin@admin.co  | 2020          |
       | Empty Username and Password |                 |               |
 
-  @LoginBrowserSession
+  @LoginBrowserSession @WIP
   Scenario: Authenticated user credentials are available in browser session
    
    
