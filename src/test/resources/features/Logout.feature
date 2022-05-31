@@ -17,9 +17,17 @@ Feature: Logout
     Then the Home page main text is not displayed
     And all elements of the Login page are displayed
 
-
-  @LogoutBrowserSession @WIP
-  Scenario: Logout is valid for all browser tabs
-   
-   
-   
+  @LogoutBrowserSession
+  Scenario: Logout is valid across all browser tabs
+    When I open a second browser tab
+    And I go to the base url
+    Then the Header elements are displayed
+    When I click the user menu button
+    And I click on the Sign Out button
+    Then the Home page main text is not displayed
+    And all elements of the Login page are displayed
+    When I close the current browser tab
+    Then the Header elements are displayed
+    When I refresh the browser window
+    Then the Home page main text is not displayed
+    And all elements of the Login page are displayed

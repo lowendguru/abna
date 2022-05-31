@@ -21,6 +21,7 @@ import java.lang.invoke.MethodHandles;
 public class CommonSteps {
     final static Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     private static EnvironmentVariables environmentVariables;
+    public static String originalWindowHandle;
 
     @Managed
     WebDriver driver;
@@ -58,8 +59,9 @@ public class CommonSteps {
         Assertions.assertThat(driver.getTitle()).describedAs("Title does not contain expected text").contains(expectedText);
     }
 
-    @When("I open a new browser tab")
+    @When("I open a second browser tab")
     public void i_open_a_new_browser_tab() {
+        originalWindowHandle = driver.getWindowHandle();
         driver.switchTo().newWindow(WindowType.TAB);
     }
 
@@ -68,4 +70,14 @@ public class CommonSteps {
         basePage.open();
     }
 
+    @When("I close the current browser tab")
+    public void i_close_the_current_browser_tab() {
+        driver.close();
+        driver.switchTo().window(originalWindowHandle);
+    }
+
+    @When("I refresh the browser window")
+    public void i_refresh_the_browser_window() {
+        driver.navigate().refresh();
+    }
 }

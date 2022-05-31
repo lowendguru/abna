@@ -14,11 +14,11 @@ This is a maven project. If Java and Maven are correctly configured in the host 
 
 To run all tests scenarios available in the folder `src/test/resources/features/` use the command:
 
-` mvn clean integration-test `
+` mvn clean verify `
 
 To run a subset of scenarios filtered by `@tags` use the following line with the desired tags:
 
-`mvn clean integration-test -Dcucumber.filter.tags="@tag1 or @tag2"`
+`mvn clean verify -Dcucumber.filter.tags="@tag1 or @tag2"`
 
 ### Test reports
 

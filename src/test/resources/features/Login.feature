@@ -40,11 +40,11 @@ Feature: Login
       | Non existing Username       | admin@admin.co  | 2020          |
       | Empty Username and Password |                 |               |
 
-  @LoginBrowserSession @WIP
+  @LoginBrowserSession
   Scenario: Authenticated user maintains browser session across tabs
     Given I login with valid credentials
     And the Home page main text is displayed
-    When I open a new browser tab
+    When I open a second browser tab
     And I go to the base url
     Then the Home page main text is displayed
     And the Header elements are displayed
