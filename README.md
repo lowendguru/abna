@@ -24,8 +24,8 @@ Serenity uses files `serenity.properties` and `src/test/resources/serenity.conf`
 # Test execution
 ## Preconditions
 The requirements to run the automated tests are:
-- Java 8+
-- Maven 3.6+
+- Java 17+
+- Maven 3.8+
 - Chrome latest
 
 # Executing from command line
