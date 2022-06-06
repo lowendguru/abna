@@ -59,6 +59,7 @@ The project can can also executed via Jenkins job available in: http://jenkins.l
 
 Currently the job can be accessed in read-only mode as anonymous user to see the console logs, artifacts and reports of previous builds. User credentials are required to configure or run the job.
 
+Html report with results of the last Jenkins execution is published at: http://jenkins.letmetrack.com/job/ABNA-Tests/HTML-Report/ 
 
 # Video demo of local execution
 The following video demonstrates an execution of the full test suite and the resulting test report.
