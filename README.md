@@ -19,7 +19,9 @@ The Page Object pattern is implemented by mapping pages (or sections) to Java cl
 The Gherkin expressions used in the .feature files are mapped (glued) to methods via regex. The step methods can be found in folder `src/test/java/functionaltests/stepdefinitions`. Step classes extend from CommonSteps for reusability of common methods.
 
 ### Configuration file
-Serenity uses file `src/test/resources/serenity.conf` for various configuration parameters such as enable/disable the browser's headless mode and to define environments.  
+Serenity uses file `src/test/resources/serenity.conf` for various configuration parameters such as enable/disable the browser's headless mode and to define environments.
+
+Additional explanation about parameters can be found in the Serenity official documentation: https://serenity-bdd.github.io/theserenitybook/latest/serenity-system-properties.html 
 
 # Test execution
 ## Preconditions
