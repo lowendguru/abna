@@ -44,7 +44,6 @@ public class CommonSteps {
     @After(order = 1)
     public void tearDown() {
         logger.info("Closing webdriver...");
-        driver.close();
         driver.quit();
         System.gc();
     }
