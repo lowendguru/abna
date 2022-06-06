@@ -39,7 +39,7 @@ To run a subset of scenarios filtered by `@tags` use the following line with the
 
 `mvn clean verify -Dcucumber.filter.tags="@tag1 or @tag2"`
 
-### Test reports
+## Test reports
 
 A full report is available after test execution is completed. The report contains pass/fail data, test duration and detailed descriptions of failed steps (including screenshot).
 
@@ -47,13 +47,20 @@ Results will be available in the file `target/site/serenity/index.html`.
 
 For demo purposes a generated report can be found in the repo file `demo/report.zip` and also available on the test server url: http://abna.lowendguru.com/report/index.html 
 
-### Results
+## Results
 
 Test coverage include positive and negative test cases. Assumptions were made for some of the tests, see comments in file `HomePage.feature` .
 
 Some tests are failing based on assumed expected behavior, the report shows the failed assertion messages and screenshots. 
 
-## Video demo of execution
+# Executing in Jenkins
+
+The project can can also executed via Jenkins job available in: http://jenkins.letmetrack.com/job/ABNA-Tests/
+
+Currently the job can be accessed in read-only mode as anonymous user to see the console logs, artifacts and reports of previous builds. User credentials are required to configure or run the job.
+
+
+# Video demo of local execution
 The following video demonstrates an execution of the full test suite and the resulting test report.
 
 [![Click for video demo of execution](https://img.youtube.com/vi/FSHKn-_1m5g/0.jpg)](https://youtu.be/FSHKn-_1m5g "Demo video")
