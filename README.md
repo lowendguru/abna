@@ -43,9 +43,9 @@ To run a subset of scenarios filtered by `@tags` use the following line with the
 
 A full report is available after test execution is completed. The report contains pass/fail data, test duration and detailed descriptions of failed steps (including screenshot).
 
-Results will be available in the file `target/site/serenity/index.html`.
+Html report with test results will be available in the file `target/site/serenity/index.html`.
 
-For demo purposes a generated report can be found in the repo file `demo/report.zip` and also available on the test server url: http://abna.lowendguru.com/report/index.html 
+For demo purposes a generated report can be found in the test server url: http://abna.lowendguru.com/report/index.html 
 
 ## Results
 
