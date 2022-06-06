@@ -9,10 +9,10 @@ import org.openqa.selenium.WebElement;
 public class LoginPage extends BasePage {
 
     @FindBy(id = "email")
-    public WebElement emailField;
+    public WebElementFacade emailField;
 
     @FindBy(id = "password")
-    public WebElement passwordField;
+    public WebElementFacade passwordField;
 
     @FindBy(css = ".btn-login")
     public WebElementFacade loginButton;
