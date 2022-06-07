@@ -15,6 +15,7 @@ public class LoginSteps {
 
     @Then("all elements of the Login page are displayed")
     public void all_elements_of_the_login_page_are_displayed() {
+        loginPage.waitForJStoLoad(10);
         SoftAssertions.assertSoftly(softly -> {
             softly.assertThat(loginPage.emailField.isDisplayed()).describedAs("Email Field is not displayed").isTrue();
             softly.assertThat(loginPage.passwordField.isDisplayed()).describedAs("Password Field is not displayed").isTrue();

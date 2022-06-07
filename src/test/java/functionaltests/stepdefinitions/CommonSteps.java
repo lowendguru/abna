@@ -25,7 +25,6 @@ public class CommonSteps {
 
     @Managed
     WebDriver driver;
-
     BasePage basePage;
     LoginPage loginPage;
 
