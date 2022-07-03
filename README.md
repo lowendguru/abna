@@ -26,7 +26,7 @@ Additional explanation about parameters can be found in the Serenity official do
 # Test execution
 ## Preconditions
 The requirements to run the automated tests are:
-- Java 17+
+- Java 11+
 - Maven 3.8+
 - Chrome latest
 
