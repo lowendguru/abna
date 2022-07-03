@@ -40,7 +40,7 @@ public class CommonSteps {
         loginPage.loginButton.click();
     }
 
-    @After(order = 1)
+    @After
     public void tearDown() {
         logger.info("Closing webdriver...");
         driver.quit();
