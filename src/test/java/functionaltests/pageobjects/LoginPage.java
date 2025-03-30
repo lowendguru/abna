@@ -1,9 +1,8 @@
 package functionaltests.pageobjects;
 
+import net.serenitybdd.annotations.DefaultUrl;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.annotations.DefaultUrl;
-import org.openqa.selenium.WebElement;
 
 @DefaultUrl("page:login.page")
 public class LoginPage extends BasePage {
