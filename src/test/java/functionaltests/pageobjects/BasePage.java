@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import java.lang.invoke.MethodHandles;
 import java.time.Duration;
 
-@DefaultUrl("base.url")
 public class BasePage extends PageObject {
     final static Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
